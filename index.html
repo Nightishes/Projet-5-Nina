@@ -4,16 +4,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 	<title>Nina Carducci, Photographe à Bordeaux</title>
 	<meta name="Description" content="Photographe vivant à Bordeaux, je serais ravi de prendre en photo un moment magique de votre vie"> 
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
+	<meta charset="UTF-8">
+	<meta name="address" content="68 avenue Alsace-Lorraine, 33200 Bordeaux.">
+	<meta name="telephone" content="05 56 67 78 89">
+	<meta property="og:title" content="Nina Carducci, Photographe à Bordeaux"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="nina-carducci.github.io"/>
+	<meta property="og:description" content="Photographe vivant à Bordeaux, je serais ravi de prendre en photo un moment magique de votre vie"/>
+	<meta name="twitter:title" content="Nina Carducci, Photographe à Bordeaux">
+	<meta name="twitter:description" content="Photographe vivant à Bordeaux, je serais ravi de prendre en photo un moment magique de votre vie">
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" defer>
+	<link rel="stylesheet" href="./assets/style.css" defer>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
+	<script src="./assets/maugallery.js" defer></script>
+	<script src="./assets/scripts.js" defer></script>
+	<script src="./assets/lazysizes.min.js" async></script>
 </head>
 <body>
 <header>
@@ -25,7 +31,7 @@
 				<li><a href="#gallery">Galerie</a></li>
 				<li><a href="#services">Service</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="Lien vers Instagram"></a></li>
+				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" id="instagram-logo" target="_blank"><img src="assets/images/instagram.png" alt="Lien vers Instagram"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -43,10 +49,10 @@
 				<img src="./assets/images/slider/ryoji-iwata-compressed.webp" class="d-block w-100" alt="Business man in the street">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-compressed.webp" class="d-block w-100" alt="Crowd during a concert">
+				<img data-src="./assets/images/slider/nicholas-green-compressed.webp" class="d-block w-100 lazyload" alt="Crowd during a concert">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-compressed.webp" class="d-block w-100" alt="A married couple kisses after the marriage ceremony">
+				<img data-src="./assets/images/slider/edward-cisneros-compressed.webp" class="d-block w-100 lazyload" alt="A married couple kisses after the marriage ceremony">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -78,15 +84,15 @@
 			<h2 class="title">Portfolio</h2>
 			<div class="container py-3">
 				<div class="gallery" style="display: none">
-					<img data-gallery-tag="Concert" class="gallery-item" alt="At a concert..." src="./assets/images/gallery/concerts/aaron-paul-compressed.webp"/>
-					<img data-gallery-tag="Entreprises" class="gallery-item" alt="Businessman in a suit" src="./assets/images/gallery/entreprise/ali-morshedlou-compressed.webp"/>
-					<img data-gallery-tag="Entreprises" class="gallery-item" alt="Meeting in a company" src="./assets/images/gallery/entreprise/jason-goodman-compressed.webp"/>
-					<img data-gallery-tag="Mariages" class="gallery-item" alt="Give your hand to your spouse" src="./assets/images/gallery/mariage/hannah-busing-compressed.webp"/>
-					<img data-gallery-tag="Portrait" class="gallery-item" alt="Portrait of Ade Tunji" src="./assets/images/gallery/portraits/ade-tunji-compressed.webp"/>
-					<img data-gallery-tag="Mariages" class="gallery-item" alt="Married couple in front of a palm tree" src="./assets/images/gallery/mariage/jakob-owens-compressed.webp"/>
-					<img data-gallery-tag="Portrait" class="gallery-item" alt="Portrait of Nino Van Prattenburg" src="./assets/images/gallery/portraits/nino-van-prattenburg-compressed.webp"/>
-					<img data-gallery-tag="Concert" class="gallery-item"  alt="Concert with special effects"src="./assets/images/gallery/concerts/austin-neil-compressed.webp"/>
-					<img data-gallery-tag="Entreprises" class="gallery-item" alt="Woman working in front of her computer" src="./assets/images/gallery/entreprise/mateus-campos-compressed.webp"/>
+					<img data-gallery-tag="Concert" class="gallery-item lazyload" alt="At a concert..." data-src="./assets/images/gallery/concerts/Aaron-paul-compressed-big.webp"/>
+					<img data-gallery-tag="Entreprises" class="gallery-item lazyload" alt="Businessman in a suit" data-src="./assets/images/gallery/entreprise/ali-morshedlou-compressed-big.webp"/>
+					<img data-gallery-tag="Entreprises" class="gallery-item lazyload" alt="Meeting in a company" data-src="./assets/images/gallery/entreprise/jason-goodman-compressed-big.webp"/>
+					<img data-gallery-tag="Mariages" class="gallery-item lazyload" alt="Give your hand to your spouse" data-src="./assets/images/gallery/mariage/hannah-busing-compressed-big.webp"/>
+					<img data-gallery-tag="Portrait" class="gallery-item lazyload" alt="Portrait of Ade Tunji" data-src="./assets/images/gallery/portraits/ade-tunji-compressed-big.webp"/>
+					<img data-gallery-tag="Mariages" class="gallery-item lazyload" alt="Married couple in front of a palm tree" data-src="./assets/images/gallery/mariage/jakob-owens-compressed-big.webp"/>
+					<img data-gallery-tag="Portrait" class="gallery-item lazyload" alt="Portrait of Nino Van Prattenburg" data-src="./assets/images/gallery/portraits/nino-van-prattenburg-compressed-big.webp"/>
+					<img data-gallery-tag="Concert" class="gallery-item lazyload"  alt="Concert with special effects"data-src="./assets/images/gallery/concerts/austin-neil-compressed-big.webp"/>
+					<img data-gallery-tag="Entreprises" class="gallery-item lazyload" alt="Woman working in front of her computer" data-src="./assets/images/gallery/entreprise/mateus-campos-compressed-big.webp"/>
 				</div>
 			</div>	
 	</section>
@@ -179,5 +185,9 @@
 		</div>
 	</div>
 </footer>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet" >
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>	
 </body>
 </html>
